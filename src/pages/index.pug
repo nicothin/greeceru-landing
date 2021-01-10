@@ -4,7 +4,7 @@ extends ../pug/layout.pug
 //-   link(rel='stylesheet', href='css/some.css')
 
 block content
-  .promo
+  section.promo
     .promo__inner
       .promo__text-wrap
         p.promo__sup-title GREECE.RU ΑΝΑΠΤΥΞΙΑΚΗ ΑΚΙΝΗΤΩΝ ΑΕ
@@ -59,7 +59,66 @@ block content
                 source(media='(min-resolution: 144dpi)', srcset='img/image-from-rawpixel-id-428435-jpeg@2x.jpg')
                 img.promo__location-img(src='img/image-from-rawpixel-id-428435-jpeg.jpg', alt='Ιόνια Νησιά')
 
-  .steps
+  section.steps
+    .steps__inner
+      .steps__header
+        h2.steps__title Εκμεταλλευτείτε το μοναδικό Σύστημα Διαδικτυακών Προσφορών
+        p.steps__descr Τρόπος λειτουργίας
+
+      .steps__item.steps__item--01
+        p.steps__item-num 01
+        .steps__item-text-wrap
+          p.steps__item-title Καταχωρήστε δωρεάν το ακίνητό σας ή βρεἰτε το ακίνητο που αναζητάτε
+          p.steps__item-descr.steps__item-descr--short Κατοικίες, γραφεία, μαγαζιά, οικόπεδα σε όλη την Ελλάδα
+        .steps__item-img-wrap.steps__item-img-wrap--gallery
+          .steps__item-gallery
+            span.steps__item-gallery-item
+              picture
+                source(media='(min-resolution: 144dpi)', srcset='img/4@2x.jpg')
+                img.steps__item-gallery-item-img(src='img/4.jpg', alt='Βίλα')
+            span.steps__item-gallery-item
+              picture
+                source(media='(min-resolution: 144dpi)', srcset='img/5@2x.jpg')
+                img.steps__item-gallery-item-img(src='img/5.jpg', alt='Βίλα')
+            span.steps__item-gallery-item
+              picture
+                source(media='(min-resolution: 144dpi)', srcset='img/6@2x.jpg')
+                img.steps__item-gallery-item-img(src='img/6.jpg', alt='Βίλα')
+
+      .steps__item.steps__item--02
+        p.steps__item-num 02
+        .steps__item-text-wrap
+          p.steps__item-title Κάνετε προσφορά στο ποσό που επιθυμείτε
+          p.steps__item-descr Την ίδια στιγμή η προσφορά Σας αποστέλνεται στον ιδιοκτήτη του ακινήτου
+        .steps__item-img-wrap
+          .steps__item-imgs-2
+            span.steps__item-imgs-2-main
+              picture
+                source(media='(min-resolution: 144dpi)', srcset='img/4@2x.jpg')
+                img(src='img/4.jpg', alt='Βίλα')
+            span.steps__item-imgs-2-action
+              picture
+                source(media='(min-resolution: 144dpi)', srcset='img/step-action@2.png')
+                img(src='img/step-action.png', alt='Ενέργειες')
+
+      .steps__item.steps__item--03
+        p.steps__item-num 03
+        .steps__item-text-wrap
+          p.steps__item-title Ο ιδιοκτήτης ακινήτου αποδέχεται ή απορρίπτει την προσφορά Σας
+          p.steps__item-descr Ευθύς αμέσως ενημερώνεστε για την απάντησή του
+        .steps__item-img-wrap
+          .steps__item-img-3
+            picture
+              source(media='(max-resolution: 143dpi) and (max-width: 767px)', srcset='img/step-3-mobile.png')
+              source(media='(min-resolution: 144dpi) and (max-width: 767px)', srcset='img/step-3-mobile@2.png')
+              source(media='(max-resolution: 143dpi) and (min-width: 768px)', srcset='img/step-3-desktop.png')
+              source(media='(min-resolution: 144dpi) and (min-width: 768px)', srcset='img/step-3-desktop@2.png')
+              img(src='img/step-3-mobile.png', alt='Βίλα και δημοπρασία')
+
+      .steps__result
+        img.steps__result-icon(src='img/agreement icon.svg', alt='Αποτέλεσμα')
+        p.steps__result-text Ο εκπρὀσωπος της εταιρείας μας επικοινωνεί μαζί Σας εντός 24 ωρών για να κλείσει η συναλλάγή
+
 
   .video
 

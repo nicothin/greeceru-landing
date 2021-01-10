@@ -27,7 +27,7 @@ let config = {
     './script.js',
   ],
   'addAssets': {
-    'src/img/logo.png': 'img/',
+    'src/img/*.{png,svg,jpg}': 'img/',
     'src/fonts/SF-UI-Display-*.{woff,woff2}': 'fonts/',
     // 'src/img/demo-*.{png,svg,jpg,jpeg}': 'img/',
     // 'src/favicon/*.{png,ico,svg,xml,webmanifest}': 'img/favicon',

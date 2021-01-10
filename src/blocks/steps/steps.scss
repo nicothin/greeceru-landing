@@ -3,6 +3,413 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .steps {
+  overflow-x: hidden;
 
   $block-name:                &; // #{$block-name}__element
+
+  &__inner {
+    max-width: $container-xl;
+    margin: auto;
+    padding: 27px 16px 55px;
+
+    @media (min-width: $screen-md) {
+      padding: 20px 24px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-top: 80px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &__header {
+    margin-bottom: 34px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 52px;
+    }
+  }
+
+  &__title {
+    margin: 0 0 8px;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+
+    @media (min-width: $screen-xl) {
+      font-size: $font-size-h2;
+    }
+  }
+
+  &__descr {
+    margin: 0;
+    color: $text-color-muted;
+    text-align: center;
+  }
+
+  &__item {
+    position: relative;
+
+    @media (min-width: $screen-xl) {
+      position: relative;
+      display: flex;
+    }
+
+    &--01 {
+
+      @media (min-width: $screen-xl) {
+        padding-bottom: 86px;
+
+        &:after {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 732px;
+          height: 252px;
+          background: url(../img/step-line-1.svg) 0 0 no-repeat;
+        }
+      }
+    }
+
+    &--02 {
+
+      @media (min-width: $screen-xl) {
+        margin-top: -17px;
+        padding-bottom: 80px;
+
+        &:after {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 732px;
+          height: 236px;
+          background: url(../img/step-line-2.svg) 0 0 no-repeat;
+        }
+
+        .steps__item-num {
+          left: 655px;
+        }
+
+        .steps__item-text-wrap {
+          padding-left: 126px;
+          order: 1;
+        }
+      }
+    }
+
+    &--03 {
+
+      @media (min-width: $screen-xl) {
+        margin-top: -5px;
+        padding-bottom: 103px;
+
+        &:after {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 558px;
+          height: 269px;
+          background: url(../img/step-line-3.svg) 0 0 no-repeat;
+        }
+
+        .steps__item-img-wrap {
+          padding-top: 22px;
+        }
+      }
+    }
+  }
+
+  &__item-num {
+    margin: 0;
+    font-size: $font-size-h0;
+    color: $gray-lighten;
+
+    @media (min-width: $screen-xl) {
+      position: absolute;
+      top: 42px;
+      left: 0;
+      font-size: 72px;
+      line-height: 1;
+    }
+  }
+
+  &__item-text-wrap {
+
+    @media (min-width: $screen-xl) {
+      flex-shrink: 0;
+      width: 440px;
+      margin-right: 25px;
+      padding-top: 120px;
+      padding-left: 95px;
+    }
+  }
+
+  &__item-title {
+    margin: 0 0 8px;
+    font-size: $font-size-h4;
+    font-weight: 400;
+
+    @media (min-width: $screen-xl) {
+      font-size: $font-size-h3;
+    }
+  }
+
+  &__item-descr {
+    margin: 0 0 24px;
+    color: $text-color-muted;
+
+    &--short {
+
+      @media (min-width: $screen-xl) {
+        max-width: 246px;
+      }
+    }
+  }
+
+  &__item-img-wrap {
+    display: flex;
+    justify-content: center;
+
+    &--gallery {
+      display: block;
+      margin-left: -13px;
+      margin-right: -16px;
+      overflow: hidden;
+
+      @media (min-width: $screen-xl) {
+        // position: absolute;
+        // top: 0;
+        // left: 440px;
+        flex-shrink: 0;
+        width: calc(50vw + 115px);
+        margin: 0;
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  &__item-gallery {
+    display: flex;
+    padding-bottom: 48px;
+
+    @media (min-width: $screen-md) {
+      justify-content: center;
+    }
+
+    @media (min-width: $screen-xl) {
+      justify-content: flex-start;
+    }
+  }
+
+  &__item-gallery-item {
+    position: relative;
+    flex-shrink: 0;
+    width: 180px;
+    padding: 16px 20px;
+    margin: 0 12px;
+    background: $white;
+
+    @media (min-width: $screen-xl) {
+      width: 255px;
+      margin: 0 15px;
+      padding: 24px 27px;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      left: 50%;
+      bottom: 0;
+      width: calc(100% - 12px);
+      height: 66.6%;
+      transform: translateX(-50%);
+      box-shadow: 0px 10px 20px rgba(71, 122, 251, 0.05), 0px 10px 20px rgba(72, 72, 72, 0.1);
+
+      @media (min-width: $screen-xl) {
+        width: calc(100% - 19px);
+      }
+    }
+  }
+
+  &__item-imgs-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 288px;
+    margin-bottom: 36px;
+    padding: 21px 24px;
+    border: 1px solid #E9EDF2;
+    border-radius: 2px;
+
+    @media (min-width: $screen-md) {
+      width: 633px;
+      padding: 30px 30px 20px;
+      flex-direction: row;
+      align-items: stretch;
+      border: 0;
+      box-shadow: 0px 10px 20px rgba(71, 122, 251, 0.05), 0px 10px 20px rgba(72, 72, 72, 0.1);
+    }
+  }
+
+  &__item-imgs-2-main {
+    position: relative;
+    flex-shrink: 0;
+    width: 180px;
+    margin: 0 12px 21px;
+    padding: 16px 20px;
+    background: $white;
+
+    @media (min-width: $screen-md) {
+      width: 198px;
+      margin: 0;
+      padding: 0;
+    }
+
+    img {
+      display: block;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      left: 50%;
+      bottom: 0;
+      width: calc(100% - 12px);
+      height: 66.6%;
+      transform: translateX(-50%);
+      box-shadow: 0px 10px 20px rgba(71, 122, 251, 0.05), 0px 10px 20px rgba(72, 72, 72, 0.1);
+
+      @media (min-width: $screen-md) {
+        display: none;
+      }
+    }
+  }
+
+  &__item-imgs-2-action {
+
+    @media (min-width: $screen-md) {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #F4F5F7;
+      border-left: 0;
+    }
+
+    img {
+      display: block;
+      width: 237px;
+    }
+  }
+
+  &__item-img-3 {
+    position: relative;
+    width: 288px;
+    margin-bottom: 35px;
+    padding: 22px 13px;
+    border: 1px solid #E9EDF2;
+    border-radius: 2px;
+
+    @media (min-width: $screen-md) {
+      width: 635px;
+      padding: 30px 0 20px 24px;
+      border: 0;
+      box-shadow: 0px 10px 20px rgba(71, 122, 251, 0.05), 0px 10px 20px rgba(72, 72, 72, 0.1);
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: -10px;
+        right: 0;
+        left: 0;
+        height: 15px;
+        background: $white;
+      }
+    }
+
+    img {
+      display: block;
+      width: 255px;
+
+      @media (min-width: $screen-md) {
+        width: 594px;
+      }
+    }
+  }
+
+  &__result {
+    position: relative;
+    max-width: 635px;
+    margin: 50px auto 0;
+    padding: 48px 30px;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0px 10px 20px rgba(71, 122, 251, 0.05), 0px 10px 20px rgba(72, 72, 72, 0.1);
+
+    @media (min-width: $screen-lg) {
+      max-width: 100%;
+      padding: 72px 270px 52px;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-top: 40px;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      top: 12px;
+      left: -8px;
+      width: 100px;
+      height: 100px;
+      background: url(../img/step-result-bg-icon-1.svg) top left no-repeat;
+      background-size: cover;
+
+      @media (min-width: $screen-lg) {
+        width: 300px;
+        height: 300px;
+        top: -84px;
+        left: -41px;
+      }
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      bottom: 9px;
+      right: -9px;
+      width: 100px;
+      height: 100px;
+      background: url(../img/step-result-bg-icon-2.svg) top left no-repeat;
+      background-size: cover;
+
+      @media (min-width: $screen-lg) {
+        width: 300px;
+        height: 300px;
+        bottom: -36px;
+        right: -85px;
+      }
+    }
+  }
+
+  &__result-icon {
+    margin-bottom: 23px;
+  }
+
+  &__result-text {
+    margin: 0;
+    font-size: 16px;
+
+    @media (min-width: $screen-lg) {
+      font-size: 20px;
+    }
+  }
 }
