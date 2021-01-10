@@ -1,0 +1,77 @@
+extends ../pug/layout.pug
+
+//- block append head
+//-   link(rel='stylesheet', href='css/some.css')
+
+block content
+  .promo
+    .promo__inner
+      .promo__text-wrap
+        p.promo__sup-title GREECE.RU ΑΝΑΠΤΥΞΙΑΚΗ ΑΚΙΝΗΤΩΝ ΑΕ
+        p.promo__date Από το 2002
+        h1.promo__title Αγορά, πώληση, ενοικίαση ακινήτων σε όλη την Ελλάδα
+      .promo__picture-wrap
+        img.promo__picture(src='img/map.svg', alt='GREECE', width='100%')
+        ul.promo__locations
+          li.promo__location.promo__location--1
+            a(href="")
+              span.promo__location-text-wrap.promo__location-text-wrap--sm
+                svg(width='20', height='20').promo__location-icon
+                  use(xlink:href='img/sprite.svg#home')
+                span.promo__location-text Νότιο Αιγαίο
+              picture
+                source(media='(min-resolution: 144dpi)', srcset='img/08884b3a-3a80-49ab-8637-df9f95ccb804@2x.jpg')
+                img.promo__location-img(src='img/08884b3a-3a80-49ab-8637-df9f95ccb804.jpg', alt='Νότιο Αιγαίο')
+          li.promo__location.promo__location--2
+            a(href="")
+              span.promo__location-text-wrap.promo__location-text-wrap--lg
+                svg(width='20', height='20').promo__location-icon
+                  use(xlink:href='img/sprite.svg#home')
+                span.promo__location-text Αττική
+              picture
+                source(media='(min-resolution: 144dpi)', srcset='img/josh-stewart-CbpLSNep0l4-unsplash@2x.jpg')
+                img.promo__location-img(src='img/josh-stewart-CbpLSNep0l4-unsplash.jpg', alt='Αττική')
+          li.promo__location.promo__location--3
+            a(href="")
+              span.promo__location-text-wrap.promo__location-text-wrap--sm
+                svg(width='20', height='20').promo__location-icon
+                  use(xlink:href='img/sprite.svg#home')
+                span.promo__location-text Κρήτη
+              picture
+                source(media='(min-resolution: 144dpi)', srcset='img/pexels-tirachard-kumtanom-347141@2x.jpg')
+                img.promo__location-img(src='img/pexels-tirachard-kumtanom-347141.jpg', alt='Κρήτη')
+          li.promo__location.promo__location--4
+            a(href="")
+              span.promo__location-text-wrap
+                svg(width='20', height='20').promo__location-icon
+                  use(xlink:href='img/sprite.svg#home')
+                span.promo__location-text Μακεδονία
+              picture
+                source(media='(min-resolution: 144dpi)', srcset='img/lazarescu-alexandra-AtJvogeUFzw-unsplash@2x.jpg')
+                img.promo__location-img(src='img/lazarescu-alexandra-AtJvogeUFzw-unsplash.jpg', alt='Μακεδονία')
+          li.promo__location.promo__location--5
+            a(href="")
+              span.promo__location-text-wrap.promo__location-text-wrap--sm
+                svg(width='20', height='20').promo__location-icon
+                  use(xlink:href='img/sprite.svg#home')
+                span.promo__location-text Ιόνια Νησιά
+              picture
+                source(media='(min-resolution: 144dpi)', srcset='img/image-from-rawpixel-id-428435-jpeg@2x.jpg')
+                img.promo__location-img(src='img/image-from-rawpixel-id-428435-jpeg.jpg', alt='Ιόνια Νησιά')
+
+  .steps
+
+  .video
+
+  .place
+
+  .faq
+
+  .picture
+
+  .reviews скопировать с greece.ru
+
+  .action
+
+//- block append page-bottom
+//-   script(src='js/some.js')
