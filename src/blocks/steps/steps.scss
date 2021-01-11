@@ -3,9 +3,9 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .steps {
-  overflow-x: hidden;
-
   $block-name:                &; // #{$block-name}__element
+
+  overflow-x: hidden;
 
   &__inner {
     max-width: $container-xl;
@@ -14,9 +14,11 @@
 
     @media (min-width: $screen-md) {
       padding: 20px 24px;
+      margin-bottom: 60px;
     }
 
     @media (min-width: $screen-xl) {
+      margin-bottom: 100px;
       padding-top: 80px;
       padding-left: 0;
       padding-right: 0;

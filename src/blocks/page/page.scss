@@ -166,11 +166,13 @@ img {
 a {
   color: $link-color;
   background-color: transparent;
+  text-decoration: none;
   transition: color 0.3s;
 
   &:hover,
   &:focus {
     color: $link-color--hover;
+    text-decoration: underline;
   }
 
   // &:visited {

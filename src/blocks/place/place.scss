@@ -5,4 +5,129 @@
 .place {
 
   $block-name:                &; // #{$block-name}__element
+
+  overflow-x: hidden;
+
+  &__inner {
+    max-width: $container-xl;
+    margin: 0 auto 54px;
+
+    @media (min-width: $screen-lg) {
+      display: flex;
+      align-items: flex-start;
+      max-width: 975px;
+      margin: auto;
+      padding-top: 48px;
+      padding-bottom: 48px;
+    }
+
+    @media (min-width: $screen-xl) {
+      max-width: $container-xl;
+      padding-top: 140px;
+      padding-bottom: 100px;
+    }
+  }
+
+  &__text-wrap {
+    padding: 10px 16px 31px;
+
+    @media (min-width: $screen-md) {
+      padding: 40px 24px 31px;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 50%;
+      flex-shrink: 0;
+      padding-right: 50px;
+    }
+
+    @media (min-width: $screen-lg) {
+      padding-left: 0;
+      padding-top: 55px;
+    }
+  }
+
+  &__title {
+    margin: 0 0 12px;
+    font-size: $font-size-h4;
+    font-weight: 400;
+
+    @media (min-width: $screen-lg) {
+      font-size: $font-size-h2;
+    }
+  }
+
+  &__descr {
+    margin: 0 0 32px;
+
+    @media (min-width: $screen-lg) {
+      font-size: $font-size-h4;
+    }
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: $font-size-h4;
+  }
+
+  &__list-item {
+    margin-bottom: 24px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__list-link {
+
+    svg {
+      vertical-align: -0.1em;
+    }
+  }
+
+  &__link-text {
+    margin-right: 8px;
+  }
+
+  &__img-wrap {
+    position: relative;
+    padding: 32px 0;
+    background: $gray-lightest;
+
+    @media (min-width: $screen-lg) {
+      width: 50%;
+      background: transparent;
+
+      &:before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        left: 95px;
+        width: 100vw;
+        background: $gray-lightest;
+      }
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-left: 15px;
+    }
+  }
+
+  &__img {
+    display: block;
+    margin: auto;
+
+    @media (min-width: $screen-lg) {
+      width: 420px;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 510px;
+      margin: 0;
+    }
+  }
 }

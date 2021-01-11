@@ -4,6 +4,8 @@ extends ../pug/layout.pug
 //-   link(rel='stylesheet', href='css/some.css')
 
 block content
+
+
   section.promo
     .promo__inner
       .promo__text-wrap
@@ -58,6 +60,8 @@ block content
               picture
                 source(media='(min-resolution: 144dpi)', srcset='img/image-from-rawpixel-id-428435-jpeg@2x.jpg')
                 img.promo__location-img(src='img/image-from-rawpixel-id-428435-jpeg.jpg', alt='Ιόνια Νησιά')
+
+
 
   section.steps
     .steps__inner
@@ -120,9 +124,40 @@ block content
         p.steps__result-text Ο εκπρὀσωπος της εταιρείας μας επικοινωνεί μαζί Σας εντός 24 ωρών για να κλείσει η συναλλάγή
 
 
-  .video
 
-  .place
+  section.video
+    .video__inner
+      header.video__header
+        h2.video__title Σύστημα Διαδικτυακών Προσφορών
+        p.video__descr Τρόπος λειτουργίας
+      +embed-responsive().video__video-wrap
+        iframe(src='https://www.youtube.com/embed/B0Q1rKpDNE4', frameborder='0', allowfullscreen='')
+
+  section.place
+    .place__inner
+      .place__text-wrap
+        h2.place__title Περιηγηθείτε τα ακίνητά μας και κάντε την προσφορά Σας
+        p.place__descr Κατοικίες, γραφεία, μαγαζιά, οικόπεδα σε όλη την Ελλάδα
+        ul.place__list
+          li.place__list-item
+            a(href='').place__list-link
+              span.place__link-text Πωλήσεις
+              svg(width='24', height='16')
+                use(xlink:href='img/sprite.svg#arrow-right-blue')
+          li.place__list-item
+            a(href='').place__list-link
+              span.place__link-text Ενοικιάσεις
+              svg(width='24', height='16')
+                use(xlink:href='img/sprite.svg#arrow-right-blue')
+          li.place__list-item
+            a(href='').place__list-link
+              span.place__link-text Εποχιακές ενοικιάσεις
+              svg(width='24', height='16')
+                use(xlink:href='img/sprite.svg#arrow-right-blue')
+      .place__img-wrap
+        picture
+          source(media='(min-resolution: 144dpi)', srcset='img/ralph-ravi-kayden-2d4lAQAlbDA-unsplash@2x.jpg')
+          img(src='img/ralph-ravi-kayden-2d4lAQAlbDA-unsplash.jpg', alt='Περιηγηθείτε τα ακίνητά μας και κάντε την προσφορά Σας', width='510', height='340').place__img
 
   .faq
 
