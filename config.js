@@ -21,7 +21,8 @@ let config = {
     // 'src/scss/print.scss',
   ],
   'addJsBefore': [
-    // 'somePackage/dist/somePackage.js', // для 'node_modules/somePackage/dist/somePackage.js',
+    // 'jquery/dist/jquery.min.js',
+    // 'owl.carousel/dist/owl.carousel.min.js',
   ],
   'addJsAfter': [
     './script.js',
@@ -29,9 +30,11 @@ let config = {
   'addAssets': {
     'src/img/*.{png,svg,jpg}': 'img/',
     'src/fonts/SF-UI-Display-*.{woff,woff2}': 'fonts/',
+    'node_modules/jquery/dist/jquery.min.js': 'js/',
+    'node_modules/owl.carousel/dist/owl.carousel.min.js': 'js/',
+    'node_modules/owl.carousel/dist/assets/owl.carousel.min.css': 'css/',
     // 'src/img/demo-*.{png,svg,jpg,jpeg}': 'img/',
     // 'src/favicon/*.{png,ico,svg,xml,webmanifest}': 'img/favicon',
-    // 'node_modules/somePackage/images/*.{png,svg,jpg,jpeg}': 'img/',
   },
   'dir': {
     'src': 'src/',

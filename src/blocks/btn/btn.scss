@@ -10,29 +10,31 @@
   border-radius: $border-radius;
   // border: 1px solid $gray-lighter;
   border: 0;
+  border-radius: 2px;
   padding: $field-padding-vertical  $field-padding-horizontal;
   vertical-align: middle;
   white-space: nowrap;
   text-overflow: ellipsis;
   user-select: none;
   text-align: center;
-  font-size: 1em;
+  font-size: $font-size-h5;
   font-family: inherit;
+  font-weight: 600;
   line-height: $line-height;
   text-decoration: none;
   text-transform: none;
-  color: $text-color;
-  background-color: $gray-lightest;
+  color: $white;
+  background-color: $color-main;
   background-image: none;
   cursor: pointer;
   overflow: hidden;
+  transition: all 0.3s;
 
   &:hover,
   &:focus {
     text-decoration: none;
-    color: $text-color;
-    background-color: darken($gray-lightest, 10%);
-    // border-color: darken($gray-lighter, 12%);
+    color: $white;
+    background-color: darken($color-main, 10%);
   }
 
   // &:visited {
@@ -55,6 +57,11 @@
     @at-root a.btn--disabled {
       pointer-events: none;
     }
+  }
+
+  &__icon-before {
+    margin-right: 8px;
+    vertical-align: middle;
   }
 
   // &__icon {

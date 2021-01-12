@@ -1,0 +1,307 @@
+// В этом файле должны быть стили для БЭМ-блока feedback, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.feedback {
+
+  $block-name:                &;
+  // #{$block-name}__element {} для вложений
+
+  padding: 15px 15px 25px;
+  background-color: $gray-lightest;
+  border-bottom: 1px solid $gray-lightest;
+  overflow-x: hidden;
+
+  &__title {
+    max-width: $container-xl;
+    margin: 0 auto;
+    padding: 38px 0 5px;
+    font-size: $font-size-h2;
+    font-weight: 400;
+    text-align: center;
+    flex-basis: 100%;
+  }
+
+  &__descr {
+    max-width: $container-xl;
+    margin: 0 auto 50px;
+    color: $text-color-muted;
+    text-align: center;
+    flex-basis: 100%;
+  }
+
+  &__slider-and-info {
+    position: relative;
+
+    @media (min-width: $screen-xl) {
+      display: flex;
+      align-items: flex-start;
+    //   padding: 0 15px;
+    //   width: 1553px;
+    //   margin: auto;
+    }
+  }
+
+  &__slider {
+    overflow-x: auto;
+    margin: 0 -15px;
+
+    @media (min-width: $screen-xl) {
+      max-width: 1120px;
+      margin-left: auto;
+      margin-right: auto;
+      overflow: hidden;
+    }
+  }
+
+  &__slider-inner {
+    display: flex;
+    width: auto;
+    padding-bottom: 34px;
+
+    .owl-stage {
+      display: flex;
+    }
+
+    .owl-item  {
+      display: flex;
+      // min-width: 320px;
+    }
+
+    .owl-stage-outer {
+      padding-bottom: 30px;
+    }
+
+    .owl-dots {
+      display: none;
+    }
+
+    @media (min-width: $screen-xl) {
+      // width: 100%;
+      margin: 0 -15px;
+
+      .owl-item  {
+        min-width: 383px;
+      }
+    }
+  }
+
+  &__item {
+    width: 260px;
+    min-width: 260px;
+    min-height: 233px;
+    margin: 0 0 0 16px;
+    padding: 26px 26px 23px 16px;
+    border-radius: $border-radius;
+    background-color: #fff;
+    backface-visibility: hidden;
+    box-shadow: 0 30px 20px -20px rgba($color-main, 0.05),
+                0 30px 20px -20px rgba(72, 72, 72, 0.1);
+
+    @media (min-width: $screen-md) {
+      width: 350px;
+      min-width: 350px;
+      min-height: 262px;
+      padding: 26px;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: calc(100% - 30px);
+    }
+  }
+
+  &__item-header {
+    position: relative;
+    padding-right: 10px;
+    display: flex;
+    min-height: 64px;
+
+    &--company {
+      flex-direction: column;
+      justify-content: center;
+
+      #{$block-name}__item-avatar {
+        width: auto;
+        height: auto;
+        border-radius: 0;
+      }
+
+      #{$block-name}__item-author-text {
+        flex-basis: auto;
+      }
+    }
+  }
+
+  &__item-avatar {
+    flex-shrink: 0;
+    display: block;
+    margin-right: 15px;
+    width: 64px !important;
+    height: 64px;
+    max-height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    backface-visibility: hidden;
+
+    @media (min-width: $screen-md) {
+      margin-right: 20px;
+    }
+  }
+
+  &__item-avatar-company {
+    display: block;
+    padding-bottom: 5px;
+
+    #{$block-name}__item-avatar {
+      width: auto !important;
+    }
+  }
+
+  &__item-author-text {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    flex-basis: 100%;
+    backface-visibility: hidden;
+  }
+
+  &__item-author-name {
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    font-size: $font-size;
+  }
+
+  &__item-author-info {
+    font-weight: 600;
+    font-size: $font-size;
+  }
+
+  &__item-type-icon {
+    display: none;
+    position: absolute;
+    top: 16px;
+    right: -8px;
+    fill: $gray;
+    opacity: .7;
+    backface-visibility: hidden;
+
+    @media (min-width: $screen-md) {
+      display: block;
+    }
+
+    @media (min-width: $screen-lg) {
+      right: -10px;
+    }
+  }
+
+  &__item-text {
+    padding: 20px 0 0;
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item-details {
+    display: inline-block;
+    margin-top: 12px;
+  }
+
+  &__item-details-icon {
+    display: inline-block;
+    vertical-align: -0.1em;
+    margin-left: 0.3em;
+    fill: $color-main;
+    transform: scale(0.6);
+    backface-visibility: hidden;
+  }
+
+  &__slider-controls {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 50%;
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    transform: translateX(-50%);
+  }
+
+  &__slider-control-prev {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 30px;
+    background-color: #fff;
+    border: 1px solid #e9edf2;
+    transition: border 0.3s;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      border-color: $color-main;
+    }
+
+    // &--inactive {
+    //   pointer-events: none;
+
+    //   svg {
+    //     fill: #acb2c1;
+    //   }
+    // }
+  }
+
+  &__slider-control-next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 30px;
+    background-color: #fff;
+    border: 1px solid #e9edf2;
+    transition: border 0.3s;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      border-color: $color-main;
+    }
+
+    // &--inactive {
+    //   pointer-events: none;
+
+    //   svg {
+    //     fill: #acb2c1;
+    //   }
+    // }
+  }
+
+  &__slider-control-arrow {
+    fill: $text-color;
+    transition: fill 0.3s;
+
+    a:hover &,
+    a:focus & {
+      fill: $color-main
+    }
+  }
+
+  &__logo-list {
+    margin: 46px 0 36px;
+    text-align: center;
+
+    @media (min-width: $screen-lg) {
+      max-width: 1110px;
+      margin: 24px auto;
+    }
+  }
+
+  &__logo-item {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 24px;
+  }
+}

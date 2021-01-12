@@ -5,4 +5,104 @@
 .faq {
 
   $block-name:                &; // #{$block-name}__element
+
+  background: $gray-lightest;
+
+  &__inner {
+    max-width: 920px;
+    margin: auto;
+    padding: 34px 16px 55px;
+
+    @media (min-width: $screen-md) {
+      padding: 34px 24px 55px;
+    }
+
+    @media (min-width: $screen-lg) {
+      padding: 50px 24px 55px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding: 90px 0 80px;
+    }
+  }
+
+  &__title {
+    margin: 0 0 24px;
+    font-size: $font-size-h4;
+    font-weight: 400;
+    text-align: center;
+
+    @media (min-width: $screen-lg) {
+      margin-bottom: 50px;
+      font-size: $font-size-h2;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 85px;
+    }
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: $font-size-h5;
+  }
+
+  &__list-item {
+    margin: 0 0 22px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(136, 145, 166, 0.3);
+
+    @media (min-width: $screen-lg) {
+      padding-bottom: 20px;
+      margin-bottom: 39px;
+    }
+  }
+
+  &__list-link {
+    color: $text-color;
+    text-decoration: none;
+
+    @media (min-width: $screen-lg) {
+      display: flex;
+    }
+
+    &:hover,
+    &:focus {
+      color: $text-color;
+      text-decoration: none;
+    }
+
+    svg {
+      vertical-align: -0.1em;
+
+      @media (min-width: $screen-lg) {
+        flex-shrink: 0;
+        margin-left: auto;
+        margin-top: 0.15em;
+      }
+    }
+  }
+
+  &__link-text {
+    margin-right: 11px;
+  }
+
+  &__descr-link-wrap {
+    margin: 0;
+    font-size: $font-size-h4;
+    text-align: center;
+  }
+
+  &__descr-link {
+
+    svg {
+      vertical-align: -0.1em;
+    }
+  }
+
+  &__descr-link-text {
+    margin-right: 10px;
+  }
 }

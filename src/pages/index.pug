@@ -159,13 +159,154 @@ block content
           source(media='(min-resolution: 144dpi)', srcset='img/ralph-ravi-kayden-2d4lAQAlbDA-unsplash@2x.jpg')
           img(src='img/ralph-ravi-kayden-2d4lAQAlbDA-unsplash.jpg', alt='Περιηγηθείτε τα ακίνητά μας και κάντε την προσφορά Σας', width='510', height='340').place__img
 
-  .faq
+  section.faq
+    .faq__inner
+      h2.faq__title Έχετε ερωτήσεις ;
+      ul.faq__list
+        li.faq__list-item
+          a(href='').faq__list-link
+            span.faq__link-text How do you go about purchasing a property?
+            svg(width='24', height='16')
+              use(xlink:href='img/sprite.svg#arrow-right-blue')
+        li.faq__list-item
+          a(href='').faq__list-link
+            span.faq__link-text Residence permits and other conditions of stay in Greece for property owners who are non-EU citizens
+            svg(width='24', height='16')
+              use(xlink:href='img/sprite.svg#arrow-right-blue')
+        li.faq__list-item
+          a(href='').faq__list-link
+            span.faq__link-text Property management
+            svg(width='24', height='16')
+              use(xlink:href='img/sprite.svg#arrow-right-blue')
+        li.faq__list-item
+          a(href='').faq__list-link
+            span.faq__link-text What is the "Average Annual Income" from a property?
+            svg(width='24', height='16')
+              use(xlink:href='img/sprite.svg#arrow-right-blue')
+      p.faq__descr-link-wrap
+        a(href="").faq__descr-link
+          span.faq__descr-link-text Περισσότερες απαντήσεις
+          svg(width='24', height='16')
+            use(xlink:href='img/sprite.svg#arrow-right-blue')
 
   .picture
+    .picture__inner
+      p.picture__msg Στείλτε μας μύνημα, #[br]θα χαρούμε να Σας βοηθήσουμε
+      +btn('')(href='/').picture__btn
+        svg(width='25', height='24').btn__icon-before
+          use(xlink:href='img/sprite.svg#messanger')
+        span Άνοιγμα στο Messenger
 
-  .reviews скопировать с greece.ru
+  section.feedback
+    h2.feedback__title Αναφορές από πελάτες και μέσα ενημέρωσης
+    p.feedback__descr Η εταιρέια μας σε διεθνή και εγχώριο τύπο
+    .feedback__slider-and-info
+      //- .feedback__stats
+      //-   .feedback__stats-item
+      //-     b.feedback__stats-num 168
+      //-     span.feedback__stats-descr Reviews from clients
+      //-     a.feedback__stats-link(href='') Add a review
+      //-   .feedback__stats-item
+      //-     b.feedback__stats-num 16
+      //-     span.feedback__stats-descr Reviews in mass media
+      //-     a.feedback__stats-link(href='') Request an interview
+      .feedback__slider
+        #feedback-slider.feedback__slider-inner.owl-carousel
+          article.feedback__item
+            header.feedback__item-header
+              img.feedback__item-avatar(src='img/feedback-avatar-01.png' alt='Jannet von Klingen')
+              .feedback__item-author-text
+                h3.feedback__item-author-name Jannet von Klingen
+                .feedback__item-author-info Designer
+              svg.feedback__item-type-icon(width='20' height='20')
+                use(xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='img/sprite.svg#clip')
+            .feedback__item-text
+              p
+                | Its sometimes her behaviour are contented. Do listening am eagerness oh objection collected. Together gay feelings continue juvenile had off one
+          article.feedback__item
+            header.feedback__item-header.feedback__item-header--company
+              span.feedback__item-avatar-company
+                img.feedback__item-avatar(src='img/feedback-avatar-company-01.png' alt='lenta')
+              .feedback__item-author-text
+                .feedback__item-author-info Russian Mass Media
+              svg.feedback__item-type-icon(width='20' height='20')
+                use(xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='img/sprite.svg#microphone')
+            .feedback__item-text
+              p
+                | Unfeeling so rapturous discovery he exquisite. Reasonably so middletons or impression by terminated. Old pleasure required removing elegance him had.
+              a.feedback__item-details(href='')
+                | Details
+                svg.feedback__item-details-icon(width='15' height='12')
+                  use(xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='img/sprite.svg#arrow-right')
+          article.feedback__item
+            header.feedback__item-header
+              img.feedback__item-avatar(src='img/feedback-avatar-01.png' alt='Jannet von Klingen')
+              .feedback__item-author-text
+                h3.feedback__item-author-name Jannet von Klingen Jannet von Klingen Jannet von Klingen
+                .feedback__item-author-info Designer Designer
+              svg.feedback__item-type-icon(width='20' height='20')
+                use(xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='img/sprite.svg#clip')
+            .feedback__item-text
+              p Its sometimes her behaviour
+          article.feedback__item
+            header.feedback__item-header
+              img.feedback__item-avatar(src='img/feedback-avatar-01.png' alt='Newsweek')
+              .feedback__item-author-text
+                h3.feedback__item-author-name Jannet von Klingen
+                .feedback__item-author-info Designer
+              svg.feedback__item-type-icon(width='20' height='20')
+                use(xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='img/sprite.svg#clip')
+            .feedback__item-text
+              p
+                | Its sometimes her behaviour are contented. Do listening am eagerness oh objection collected. Together gay feelings continue juvenile had off one
+              a.feedback__item-details(href='')
+                | Details
+                svg.feedback__item-details-icon(width='15' height='12')
+                  use(xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='img/sprite.svg#arrow-right')
+          article.feedback__item
+            header.feedback__item-header
+              img.feedback__item-avatar(src='img/feedback-avatar-01.png' alt='Jannet von Klingen')
+              .feedback__item-author-text
+                h3.feedback__item-author-name Jannet von Klingen Jannet von Klingen Jannet von Klingen
+                .feedback__item-author-info Designer Designer
+              svg.feedback__item-type-icon(width='20' height='20')
+                use(xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='img/sprite.svg#clip')
+            .feedback__item-text
+              p Its sometimes her behaviour
+          article.feedback__item
+            header.feedback__item-header
+              img.feedback__item-avatar(src='img/feedback-avatar-01.png' alt='Newsweek')
+              .feedback__item-author-text
+                h3.feedback__item-author-name Jannet von Klingen
+                .feedback__item-author-info Designer
+              svg.feedback__item-type-icon(width='20' height='20')
+                use(xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='img/sprite.svg#clip')
+            .feedback__item-text
+              p
+                | Its sometimes her behaviour are contented. Do listening am eagerness oh objection collected. Together gay feelings continue juvenile had off one
+              a.feedback__item-details(href='')
+                | Details
+                svg.feedback__item-details-icon(width='15' height='12')
+                  use(xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='img/sprite.svg#arrow-right')
+      .feedback__slider-controls
+        span#feedback-slider-prev.feedback__slider-control-prev
+          svg.feedback__slider-control-arrow(width='15' height='12')
+            use(xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='img/sprite.svg#arrow-left')
+        span#feedback-slider-next.feedback__slider-control-next
+          svg.feedback__slider-control-arrow(width='15' height='12')
+            use(xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='img/sprite.svg#arrow-right')
+    p.feedback__logo-list
+      img.feedback__logo-item(src='img/feedback-logo-01.png' alt='Newsweek')
+      img.feedback__logo-item(src='img/feedback-logo-02.png' alt='Independent')
+      img.feedback__logo-item(src='img/feedback-logo-04.png' alt='naftemporiki.gr')
+      img.feedback__logo-item(src='img/feedback-logo-05.png' alt='3 канал')
+      img.feedback__logo-item(src='img/feedback-logo-03.png' alt='РБК')
 
-  .action
+  section.action
+    .action__inner
+      h2.action__title Είστε ιδιοκτήτης ακινήτου;
+      p.action__descr Καταχωρήστε το ακίνητό Σας και ξεκινήστε να λαμβάνετε διαδικτυακές προσφορές
+      +btn('Δωρεάν καταχώρηση ακινήτου')(href='/').action__btn
 
 //- block append page-bottom
 //-   script(src='js/some.js')

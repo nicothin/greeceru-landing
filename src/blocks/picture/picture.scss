@@ -5,4 +5,49 @@
 .picture {
 
   $block-name:                &; // #{$block-name}__element
+
+  padding: 56px 16px 48px;
+  background: url(../img/angela-pham-_uqDYFkrmLM-unsplash.jpg) center;
+  background-size: cover;
+
+  @media (min-width: $screen-xl) {
+    padding-top: 160px;
+    padding-bottom: 160px;
+  }
+
+  &__inner {
+    max-width: 872px;
+    margin: auto;
+    padding: 48px 8px 50px;
+    text-align: center;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.9);
+
+    @media (min-width: $screen-xl) {
+      padding: 98px;
+      max-width: 920px;
+    }
+  }
+
+  &__msg {
+    margin: 0 0 22px;
+    font-size: $font-size-h4;
+
+    @media (min-width: $screen-lg) {
+      margin-bottom: 36px;
+      font-size: $font-size-h2;
+    }
+  }
+
+  &__btn {
+
+    @media (min-width: $screen-md) {
+      padding-right: 33px;
+      padding-left: 24px;
+    }
+
+    @media (min-width: $screen-xl) {
+      font-size: $font-size-h4;
+    }
+  }
 }
