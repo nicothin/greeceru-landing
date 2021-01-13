@@ -1,7 +1,7 @@
 // Базовые цвета https://colorscheme.ru/color-converter.html
 
 $black:                       hsl(0, 0%, 0%);
-$gray-darkest:                hsl(0, 0%, 10%);
+$gray-darkest:                #31353f;
 $gray-darker:                 #31353F;
 $gray-darken:                 hsl(0, 0%, 30%);
 $gray-dark:                   hsl(0, 0%, 40%);
@@ -13,6 +13,8 @@ $gray-lightest:               #F3F5F9;
 $white:                       hsl(0, 0%, 100%);
 
 $color-main:                  #477AFB;
+$color-main-light:            #99b6ff;
+$color-main-accent:           #346af4;
 $color-success:               hsl(120, 39%, 54%);
 $color-danger:                hsl(2, 64%, 58%);
 $color-warning:               hsl(35, 84%, 62%);
@@ -21,6 +23,7 @@ $color-vk:                    #4a76a8;
 $color-fb:                    #4267b2;
 $color-tw:                    #40a2f5;
 $color-gh:                    #24292e;
+$color-youtube:               #dc472e;
 
 
 
@@ -49,7 +52,7 @@ $font-size-h4:                18px;
 $font-size-h5:                16px;
 $font-size-h6:                14px;
 
-$font-size-sm:                0.75em; // 12px от 16px
+$font-size-sm:                12px;
 
 $line-height:                 1.5;
 
@@ -87,8 +90,8 @@ $grid-gutter-width:           30px;
 
 // Разное
 
-$field-padding-vertical:      16px;
-$field-padding-horizontal:    18px;
+$field-padding-vertical:     9px;
+$field-padding-horizontal:   14px;
 
 $border-radius:               3px;
 $opacity:                     0.7;

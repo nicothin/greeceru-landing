@@ -4,48 +4,306 @@
 
 .field-text {
 
-  $block-name:                &; // #{$block-name}__element
+  $block-name:                &;
 
   display: block;
-  margin-bottom: $typo-margin-vertical;
 
   &__name {
-    @include field-name;
+    display: block;
+    margin-bottom: 13px;
+    line-height: 1;
+    font-weight: 400;
+    color: $gray;
+
+    &--sm {
+      font-size: $font-size-sm;
+      font-weight: 400;
+    }
+
+    &--one-line {
+      white-space: nowrap;
+    }
+
+    &--has-dsecr {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+
+      #{$block-name}__name-main  {
+        margin-right: auto;
+      }
+
+      small {
+        font-size: $font-size-sm;
+      }
+    }
   }
 
   &__input-wrap {
     display: block;
+    position: relative;
+
+    &--input-group {
+      display: flex;
+
+      #{$block-name}__input {
+        position: relative;
+        flex-basis: 50%;
+        max-width: 50%;
+
+        &:focus {
+          z-index: 1;
+        }
+
+        &:not(:first-child):not(:last-child) {
+          border-radius: 0;
+          border-right: 0;
+        }
+
+        &:first-child {
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+          border-right: 0;
+        }
+
+        &:last-child {
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+      }
+    }
+
+    &--input-btn-group {
+      display: flex;
+
+      #{$block-name}__input,
+      .btn {
+        position: relative;
+
+        &:focus {
+          z-index: 1;
+        }
+
+        &:not(:first-child):not(:last-child) {
+          border-radius: 0;
+          border-right: 0;
+        }
+
+        &:first-child {
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+          border-right: 0;
+        }
+
+        &:last-child {
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+      }
+
+      .btn {
+        flex-shrink: 0;
+      }
+    }
+
+    &--has-clean {
+
+      #{$block-name}__input {
+        padding-right: 40px;
+      }
+    }
+
+    &--money {
+
+      #{$block-name}__input {
+        padding-right: 25px;
+      }
+
+      &:before {
+        content: attr(data-money);
+        position: absolute;
+        top: 20px;
+        right: 25px;
+        font-size: $font-size + 4;
+        line-height: 1;
+        font-weight: 700;
+        color: $gray;
+      }
+    }
+
+    &--required {
+
+      #{$block-name}__input {
+        padding-right: 25px;
+      }
+
+      &:before {
+        content: '*';
+        position: absolute;
+        top: 18px;
+        right: 10px;
+        font-size: $font-size + 4;
+        line-height: 1;
+        font-weight: 700;
+        color: $gray;
+
+        @media (min-width: $screen-md) {
+          top: 15px;
+        }
+      }
+    }
+
+    &--has-btn {
+      display: flex;
+      // justify-content: space-between;
+
+      .field-text__input {
+        min-width: 100px;
+      }
+
+      .btn {
+        margin-left: 9px;
+        flex-shrink: 0;
+      }
+    }
   }
 
   &__input {
-    @include field-text;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    min-height: 40px;
+    // height: 2.125em;
+    padding: ($field-padding-vertical + 4) $field-padding-horizontal;
+    margin: 0;
+    font-size: $font-size;
+    line-height: $font-size + 6;
+    font-family: inherit;
+    background-color: #fff;
+    border: 1px solid $gray-lightest;
+    border-radius: $border-radius;
+    appearance: textfield;
+
+    @at-root div#{$block-name}__input {
+      appearance: none;
+    }
+
+    @media (min-width: $screen-md) {
+      padding: $field-padding-vertical $field-padding-horizontal;
+    }
+
+    &--fz-small {
+      font-size: $font-size-sm;
+    }
+
+    &--lg {
+      padding: ($field-padding-vertical + 4) $field-padding-horizontal;
+
+      @media (min-width: $screen-md) {
+        padding: ($field-padding-vertical + 4) $field-padding-horizontal;
+      }
+    }
+
+    &--has-right-btn {
+      padding-right: 40px;
+    }
+
+    &:focus {
+      @include field-focus;
+    }
+
+    &[disabled],
+    &[readonly] {
+      cursor: default;
+      background-color: $gray-lighter;
+    }
+
+    &[type='search']::-webkit-search-cancel-button,
+    &[type='search']::-webkit-search-decoration {
+      -webkit-appearance: none; /* stylelint-disable-line  property-no-vendor-prefix */
+    }
+
+    &[type='color'] {
+      // max-width: 100px;
+      padding: 0;
+    }
+
+    &::placeholder {
+      color: $gray;
+      opacity: 1;
+    }
 
     @at-root textarea#{&} {
-      $textarea-height: ($line-height * 2) + ($field-padding-vertical * 2);
+      // $textarea-height: ($line-height / 1em * 2) + ($field-padding-vertical * 2);
 
       height: auto;
-      min-height: calc(#{$textarea-height} + 2px);
+      min-height: 125px;
       resize: vertical;
     }
   }
 
-  &__help-text {
-    @include field-help-text;
+  &__locate-btn {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    border: 0;
+    background: transparent;
+    padding: ($field-padding-vertical + 4) $field-padding-horizontal;
+    line-height: $font-size + 6;
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+
+      svg {
+        fill: $color-main-accent;
+      }
+    }
+
+    @media (min-width: $screen-md) {
+      padding: $field-padding-vertical $field-padding-horizontal;
+    }
+
+    svg {
+      display: inline-block;
+      vertical-align: middle;
+      fill: $gray;
+      transition: fill $transition-time;
+    }
+  }
+
+  &__clean {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 100%;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  &__clean-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
   }
 
 
 
   &--error {
 
-    #{$block-name}__name,
-    #{$block-name}__input,
-    #{$block-name}__help-text {
-      color: $color-danger;
-    }
-
     #{$block-name}__input {
       border-color: $color-danger;
-      background-color: lighten($color-danger, 35%);
+    }
+
+    #{$block-name}__name,
+    #{$block-name}__help-text {
+      color: $color-danger;
     }
   }
 }

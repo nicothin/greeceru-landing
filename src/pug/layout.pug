@@ -50,6 +50,149 @@ html(class='page', lang='ru')
 
       .page__footer-wrapper
         +page-footer()
+          .page-footer__left
+            section.page-footer__block.page-footer__block--about
+              h3.page-footer__block-title Σχετικά με την ιστοσελίδα
+              .page-footer__block-text
+                .page-footer__copyright
+                  | &copy; Copyright 2021 Greece.ru
+                  p Real estate agency with the&nbsp;best properties. Become a&nbsp;part of&nbsp;our&nbsp;community.
+                p.page-footer__address
+                  | Greece, Thessaloniki, Nikis Ave 1,  floor 2, 56424,
+                  a(href='tel:+306974383') +30 6974-383
+              ul.page-footer__list
+                li
+                  a(href='/el/search/buy/') Πώληση
+                li
+                  a(href='/el/search/rent/') Εποχιακή Ενοικίαση
+                li
+                  a(href='/el/list-property-params/') Δωρεάν καταχώριση ακινήτου
+                li
+                  a(href='/el/profile/point/') Προσθήκη σημείου
+                li
+                  a(href='/el/about/') Περί εταιρίας
+                li
+                  a(href='/el/blog/') Blog
+                li
+                  a(href='/el/faq/#faq6-74') Όροι Χρήσης
+                li
+                  a(href='/el/faq/#faq6-73') Πολιτική απορρήτου
+            section.page-footer__block.page-footer__block--guide
+              h3.page-footer__block-title Οδηγός περιοχών
+              ul.page-footer__list.page-footer__list--arrow
+                li
+                  a(href='/el/region/eastern-macedonia-and-thrace/')
+                    svg.page-footer__list-icon(height='6' width='10')
+                      use(xlink:href='img/sprite.svg#arrow-right' xmlns:xlink='http://www.w3.org/1999/xlink')
+                    | Ανατολική Μακεδονία και Θράκη
+                li
+                  a(href='/el/region/attica/')
+                    svg.page-footer__list-icon(height='6' width='10')
+                      use(xlink:href='img/sprite.svg#arrow-right' xmlns:xlink='http://www.w3.org/1999/xlink')
+                    | Αττική
+                li
+                  a(href='/el/region/north-aegean/')
+                    svg.page-footer__list-icon(height='6' width='10')
+                      use(xlink:href='img/sprite.svg#arrow-right' xmlns:xlink='http://www.w3.org/1999/xlink')
+                    | Βόρειο Αιγαίο
+                li
+                  a(href='/el/region/western-greece/')
+                    svg.page-footer__list-icon(height='6' width='10')
+                      use(xlink:href='img/sprite.svg#arrow-right' xmlns:xlink='http://www.w3.org/1999/xlink')
+                    | Δυτική Ελλάδα
+                li
+                  a(href='/el/region/dytikh-makedonia/')
+                    svg.page-footer__list-icon(height='6' width='10')
+                      use(xlink:href='img/sprite.svg#arrow-right' xmlns:xlink='http://www.w3.org/1999/xlink')
+                    | Δυτική Μακεδονία
+                li
+                  a(href='/el/region/hpeiros/')
+                    svg.page-footer__list-icon(height='6' width='10')
+                      use(xlink:href='img/sprite.svg#arrow-right' xmlns:xlink='http://www.w3.org/1999/xlink')
+                    | Ήπειρος
+                li
+                  a(href='/el/region/thessaly/')
+                    svg.page-footer__list-icon(height='6' width='10')
+                      use(xlink:href='img/sprite.svg#arrow-right' xmlns:xlink='http://www.w3.org/1999/xlink')
+                    | Θεσσαλία
+                li
+                  a(href='/el/region/ionian-islands/')
+                    svg.page-footer__list-icon(height='6' width='10')
+                      use(xlink:href='img/sprite.svg#arrow-right' xmlns:xlink='http://www.w3.org/1999/xlink')
+                    | Ιόνια νησιά
+                li
+                  a(href='/el/region/kentrikh-makedonia/')
+                    svg.page-footer__list-icon(height='6' width='10')
+                      use(xlink:href='img/sprite.svg#arrow-right' xmlns:xlink='http://www.w3.org/1999/xlink')
+                    | Κεντρική Μακεδονία
+                li
+                  a(href='/el/region/crete/')
+                    svg.page-footer__list-icon(height='6' width='10')
+                      use(xlink:href='img/sprite.svg#arrow-right' xmlns:xlink='http://www.w3.org/1999/xlink')
+                    | Κρήτη
+                li
+                  a(href='/el/region/south-aegean/')
+                    svg.page-footer__list-icon(height='6' width='10')
+                      use(xlink:href='img/sprite.svg#arrow-right' xmlns:xlink='http://www.w3.org/1999/xlink')
+                    | Νότιο Αιγαίο
+                li
+                  a(href='/el/region/peloponnese/')
+                    svg.page-footer__list-icon(height='6' width='10')
+                      use(xlink:href='img/sprite.svg#arrow-right' xmlns:xlink='http://www.w3.org/1999/xlink')
+                    | Πελοπόννησος
+                li
+                  a(href='/el/region/central-greece/')
+                    svg.page-footer__list-icon(height='6' width='10')
+                      use(xlink:href='img/sprite.svg#arrow-right' xmlns:xlink='http://www.w3.org/1999/xlink')
+                    | Στερεά Ελλάδα
+          .page-footer__right
+            section.page-footer__block.page-footer__block--subscribe
+              h3.page-footer__block-title Εγγραφή στο κανάλι μας
+              form.page-footer__subscribe(action='')
+                a.btn.btn--youtube(href='https://www.youtube.com/subscription_center?add_user=GreeceRuTube')
+                  svg(width='32' height='32')
+                    use(xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='img/sprite.svg#youtube')
+                  | Εγγραφή στο κανάλι
+                span.page-footer__subscribe-or ή
+                .field-text
+                  span.field-text__input-wrap.field-text__input-wrap--input-btn-group
+                    input.field-text__input.field-text__input--fz-small(type='text' placeholder='Εισάγετε το email σας')
+                    button.btn.btn--sm
+                      svg.btn__icon-alone(width='18' height='16')
+                        use(xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='img/sprite.svg#send')
+            section.page-footer__block.page-footer__block--social
+              h3.page-footer__block-title Κρατήστε την επαφή
+              ul.social-links
+                li
+                  a.social-links__item(href='https://www.facebook.com/Greece.Ru')
+                    span.social-links__item-text Facebook
+                    svg.social-links__icon(width='12' height='12')
+                      use(xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='img/sprite.svg#facebook')
+                li
+                  a.social-links__item(href='https://twitter.com/GreeceRu')
+                    span.social-links__item-text Twitter
+                    svg.social-links__icon(width='12' height='12')
+                      use(xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='img/sprite.svg#twitter')
+                li
+                  a.social-links__item(href='https://www.greece.ru/el/')
+                    span.social-links__item-text Instagram
+                    svg.social-links__icon.social-links__icon--instagram(width='12' height='12')
+                      use(xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='img/sprite.svg#instagram')
+                li
+                  a.social-links__item(href='https://plus.google.com/111611324951608982447/posts')
+                    span.social-links__item-text Google Plus
+                    svg.social-links__icon(width='12' height='12')
+                      use(xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='img/sprite.svg#google-plus')
+          .page-footer__bank
+            img(src='img/bank-logo-01.png' alt='')
+            img(src='img/bank-logo-02.png' alt='')
+            img(src='img/bank-logo-03.png' alt='')
+            img(src='img/bank-logo-04.png' alt='')
+            img(src='img/bank-logo-05.png' alt='')
+            img(src='img/bank-logo-06.png' alt='')
+            img(src='img/bank-logo-07.png' alt='')
+            img(src='img/bank-logo-08.png' alt='')
+            img(src='img/bank-logo-09.png' alt='')
 
     block page-bottom
       script(src='js/jquery.min.js')

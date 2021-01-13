@@ -37,10 +37,6 @@
     background-color: darken($color-main, 10%);
   }
 
-  // &:visited {
-  //   color: $text-color;
-  // }
-
   &:active,
   &:focus {
     @include field-focus;
@@ -52,7 +48,6 @@
     cursor: not-allowed;
     color: $text-color;
     background-color: $gray-lightest;
-    // border-color: $gray-lighter;
 
     @at-root a.btn--disabled {
       pointer-events: none;
@@ -64,30 +59,32 @@
     vertical-align: middle;
   }
 
-  // &__icon {
-  //   display: inline-block;
-  //   vertical-align: middle;
-  // }
+  &--youtube {
+    position: relative;
+    padding: 9px 25px 9px 48px;
+    font-size: 14px;
+    background: $color-youtube;
+    box-shadow: 0 1px 3px 0 rgba(115, 124, 148, 0.4);
 
+    @media (min-width: $screen-md) {
+      padding-left: 48px;
+      padding-right: 25px;
+    }
 
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: #fff;
+      background-color: darken($color-youtube, 10%);
+      border-color: transparent;
+      box-shadow: 0 1px 3px 0 rgba(115, 124, 148, 0.4);
+    }
 
-  // &--main {
-  //   color: #fff;
-  //   background-color: $color-main;
-  //   // border: 1px solid $color-main;
-
-  //   &:hover,
-  //   &:focus {
-  //     color: #fff;
-  //     background-color: darken($color-main, 10%);
-  //     // border-color: darken($color-main, 12%);
-  //   }
-
-  //   &--disabled,
-  //   &:disabled {
-  //     color: #fff;
-  //     background-color: $color-main;
-  //     // border-color: $color-main;
-  //   }
-  // }
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 8px;
+      transform: translateY(-50%);
+    }
+  }
 }
