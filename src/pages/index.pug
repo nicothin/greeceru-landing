@@ -5,6 +5,8 @@ extends ../pug/layout.pug
 
 block content
 
+  +btn('Δωρεάν καταχώρηση ακινήτου')(href='/').fixed-btn
+
 
   section.promo
     .promo__inner
@@ -71,7 +73,7 @@ block content
 
       .steps__item.steps__item--01
         p.steps__item-num 01
-        .steps__item-text-wrap
+        .steps__item-text-wrap.steps__item-text-wrap--gallery
           p.steps__item-title Καταχωρήστε δωρεάν το ακίνητό σας ή βρεἰτε το ακίνητο που αναζητάτε
           p.steps__item-descr.steps__item-descr--short Κατοικίες, γραφεία, μαγαζιά, οικόπεδα σε όλη την Ελλάδα
         .steps__item-img-wrap.steps__item-img-wrap--gallery
@@ -84,7 +86,7 @@ block content
               picture
                 source(media='(min-resolution: 144dpi)', srcset='img/5@2x.jpg')
                 img.steps__item-gallery-item-img(src='img/5.jpg', alt='Βίλα')
-            span.steps__item-gallery-item
+            span.steps__item-gallery-item.steps__item-gallery-item--no-xl
               picture
                 source(media='(min-resolution: 144dpi)', srcset='img/6@2x.jpg')
                 img.steps__item-gallery-item-img(src='img/6.jpg', alt='Βίλα')
@@ -113,11 +115,8 @@ block content
         .steps__item-img-wrap
           .steps__item-img-3
             picture
-              source(media='(max-resolution: 143dpi) and (max-width: 767px)', srcset='img/step-3-mobile.png')
-              source(media='(min-resolution: 144dpi) and (max-width: 767px)', srcset='img/step-3-mobile@2.png')
-              source(media='(max-resolution: 143dpi) and (min-width: 768px)', srcset='img/step-3-desktop.png')
-              source(media='(min-resolution: 144dpi) and (min-width: 768px)', srcset='img/step-3-desktop@2.png')
-              img(src='img/step-3-mobile.png', alt='Βίλα και δημοπρασία')
+              source(media='(min-width: 768px)', srcset='img/step-3-desktop@2.png')
+              img(src='img/step-3-mobile@2.png', alt='Βίλα και δημοπρασία')
 
       .steps__result
         img.steps__result-icon(src='img/agreement icon.svg', alt='Αποτέλεσμα')
@@ -132,6 +131,8 @@ block content
         p.video__descr Τρόπος λειτουργίας
       +embed-responsive().video__video-wrap
         iframe(src='https://www.youtube.com/embed/B0Q1rKpDNE4', frameborder='0', allowfullscreen='')
+
+
 
   section.place
     .place__inner
@@ -158,6 +159,8 @@ block content
         picture
           source(media='(min-resolution: 144dpi)', srcset='img/ralph-ravi-kayden-2d4lAQAlbDA-unsplash@2x.jpg')
           img(src='img/ralph-ravi-kayden-2d4lAQAlbDA-unsplash.jpg', alt='Περιηγηθείτε τα ακίνητά μας και κάντε την προσφορά Σας', width='510', height='340').place__img
+
+
 
   section.faq
     .faq__inner
@@ -189,6 +192,8 @@ block content
           svg(width='24', height='16')
             use(xlink:href='img/sprite.svg#arrow-right-blue')
 
+
+
   .picture
     .picture__inner
       p.picture__msg Στείλτε μας μύνημα, #[br]θα χαρούμε να Σας βοηθήσουμε
@@ -196,6 +201,8 @@ block content
         svg(width='25', height='24').btn__icon-before
           use(xlink:href='img/sprite.svg#messanger')
         span Άνοιγμα στο Messenger
+
+
 
   section.feedback
     h2.feedback__title Αναφορές από πελάτες και μέσα ενημέρωσης
@@ -302,11 +309,15 @@ block content
       img.feedback__logo-item(src='img/feedback-logo-05.png' alt='3 канал')
       img.feedback__logo-item(src='img/feedback-logo-03.png' alt='РБК')
 
+
+
   section.action
     .action__inner
       h2.action__title Είστε ιδιοκτήτης ακινήτου;
       p.action__descr Καταχωρήστε το ακίνητό Σας και ξεκινήστε να λαμβάνετε διαδικτυακές προσφορές
-      +btn('Δωρεάν καταχώρηση ακινήτου')(href='/').action__btn
+      +btn('Δωρεάν καταχώρηση ακινήτου')(href='/').action__btn.action__btn--js
+
+
 
 //- block append page-bottom
 //-   script(src='js/some.js')

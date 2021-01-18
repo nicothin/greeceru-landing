@@ -23,4 +23,17 @@ $(document).ready(function() {
     $('#feedback-slider').trigger('prev.owl.carousel');
   });
 
+  $(window).scroll(function () {
+    var top_of_element = $(".action__btn--js").offset().top;
+    var bottom_of_element = $(".action__btn--js").offset().top + $(".action__btn--js").outerHeight();
+    var bottom_of_screen = $(window).scrollTop() + $(window).innerHeight();
+    var top_of_screen = $(window).scrollTop();
+
+    if ((bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element)) {
+      $('.fixed-btn').addClass('fixed-btn--hidden');
+    } else {
+      $('.fixed-btn').removeClass('fixed-btn--hidden');
+    }
+  });
+
 });

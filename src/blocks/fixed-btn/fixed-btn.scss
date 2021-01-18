@@ -1,0 +1,24 @@
+// В этом файле должны быть стили для БЭМ-блока fixed-btn, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.fixed-btn {
+
+  $block-name:                &; // #{$block-name}__element
+
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+
+  @media (min-width: $screen-sm) {
+    left: auto;
+    right: 20px;
+    bottom: 20px;
+  }
+
+  &--hidden {
+    display: none;
+  }
+}

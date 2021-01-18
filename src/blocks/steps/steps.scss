@@ -147,6 +147,10 @@
       margin-right: 25px;
       padding-top: 120px;
       padding-left: 95px;
+
+      &--gallery {
+        width: 520px;
+      }
     }
   }
 
@@ -219,6 +223,10 @@
       width: 255px;
       margin: 0 15px;
       padding: 24px 27px;
+
+      &--no-xl {
+        display: none;
+      }
     }
 
     &:before {
