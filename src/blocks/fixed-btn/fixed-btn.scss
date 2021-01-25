@@ -10,12 +10,16 @@
   bottom: 0;
   right: 0;
   left: 0;
-  z-index: 10;
+  z-index: 20;
+  padding-top: 14px;
+  padding-bottom: 14px;
 
   @media (min-width: $screen-sm) {
     left: auto;
     right: 20px;
     bottom: 20px;
+    padding-top: 9px;
+    padding-bottom: 9px;
   }
 
   &--hidden {
